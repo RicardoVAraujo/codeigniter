@@ -1,0 +1,22 @@
+<?php
+echo form_open('contato/enviar');
+
+echo form_label('Nome:');
+echo form_input(array("name" => "nome", "class" => "input"));
+
+echo form_label('E-mail:');
+echo form_input(array("name" => "mail", "class" => "input"));
+
+echo form_label('Assunto:');
+echo form_input(array("name" => "assunto", "class" => "input"));
+
+echo form_label('Mensagem:');
+echo form_textarea(array("name" => "mensagem"));
+
+echo form_label('');
+echo form_submit(array("name" => "enviar", "value" => "ok", 'class' => 'btn btn-primary'));
+
+echo form_close();
+
+echo (isset($errors)) ? "<div id='errors'>" . $errors . '</div>' : '';
+echo (isset($enviado)) ? "<div id='enviado'>E-mail enviado com sucesso !</div>" : '';

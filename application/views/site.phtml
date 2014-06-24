@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo $titulo; ?></title>
+        <?php echo link_tag('public/css/site.css'); ?>
+        <?php echo link_tag('public/bootstrap/css/bootstrap.css'); ?>
+        <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="container">
+            <div id="busca">
+                <?php
+                echo form_open('busca/filme', array('method' => 'get'));
+                echo form_input(array('name' => 'q', 'placeholder' => 'busque um filme'));
+                echo form_submit(array('value' => 'ok', 'class' => 'btn btn-primary'));
+                echo form_close();
+                ?>
+            </div>
+            <div id="menu">
+                <?php echo anchor("./", "Home"); ?>
+                <?php echo anchor("contato", "contato"); ?>
+                <?php echo anchor("cadastro", "cadastro"); ?>
+                <?php echo anchor("cart", "carrinho"); ?>
+            </div>
+            <div class="fix"></div>
+            <div id="container">
+                <?php $this->load->view($view); ?>
+            </div>
+            <div id="footer">
+                Curso de codeigniter da asolucoesweb - 2013
+            </div>
+        </div>
+    </body>
+</html>

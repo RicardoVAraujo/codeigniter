@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#container{
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Alef';
+}
+
+h1{
+    color: #900;
+}
+
+.lista_filmes_inicio{
+    background-color: #efefef;
+    padding: 3px;
+    border: solid 1px #ccc;
+    margin-bottom: 10px;
+}
+
+label{
+    display: block;
+}
+.input{
+    width: 150px;
+    height: 25px;
+    border: solid 1px #000;
+}
+
+#errors{
+    background-color: #900;
+    color: #fff;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#enviado{
+    background-color: green;
+    color: #fff;
+    padding: 5px;
+    margin-top: 10px;
+}
+#busca{
+    width: 300px;
+    float: right;
+}
+img{
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 18px;
+}
+#menu a{
+    background-color: #efefef;
+    color: #000;
+    margin-right: 3px;
+    padding: 5px;
+    font-size: 16px;
+    border: solid 1px #ccc;
+}
+
+.pagination a {
+    background-color: #efefef;
+    color: #000;
+    margin-right: 3px;
+    padding: 5px;
+    font-size: 16px;
+    border: solid 1px #ccc;
+}
+.fix{
+  clear: both;
+}
+
+#linha-cart{
+    text-align: center;
+    background-color: #000;
+    color: #FFF;
+}
+#footer{
+    text-align: center;
+    font-size: 18px;
+    background-color: #ccc;
+}

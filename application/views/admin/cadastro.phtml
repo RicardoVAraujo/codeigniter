@@ -1,0 +1,19 @@
+<?php
+
+echo form_open_multipart('admin/cadastro/register');
+
+echo form_label('Filme');
+echo form_input(array('name' => 'filme', 'value' => set_value('filme')));
+
+echo form_label('descrição do filme');
+echo form_textarea(array('name' => 'descricao', 'value' => set_value('descricao')));
+
+echo form_label('Foto');
+echo form_upload('userfile');
+
+echo form_label();
+echo form_submit(array('name' => 'ok', 'value' => 'cadastrar', 'class' => 'btn btn-primary'));
+
+echo form_close();
+
+echo (isset($erro)) ? "<div id=errors>".$erro."</div>" : '';

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo $titulo; ?></title>
+        <?php echo link_tag('public/css/site.css'); ?>
+        <?php echo link_tag('public/bootstrap/css/bootstrap.css'); ?>
+        <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="container">
+            <?php
+            echo form_open();
+
+            echo form_label('login:');
+            echo form_input('login');
+
+            echo form_label('senha:');
+            echo form_input('senha');
+
+            echo form_label('');
+            echo form_submit(array('name' => 'logar', 'value' => 'ok', 'class' => 'btn btn-primary'));
+
+            echo form_close();
+            ?>
+            
+            <?php
+                if(isset($erro) AND $erro === true){
+                    echo 'Usuário ou senha inválidos';
+                }          
+            ?>
+            
+        </div>
+    </div>
+</body>
+</html>

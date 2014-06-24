@@ -1,0 +1,30 @@
+<?php
+
+echo '<br />';
+echo heading("Filmes Encontrados", 1, 'class=label label-info');
+
+foreach ($filmes_encontrados as $filme):
+
+    echo '<div class="lista_filmes_inicio">';
+    echo heading(ucwords($filme->filme_nome), 2);
+    echo img($filme->filme_thumb);
+    echo "<p>" . word_limiter($filme->filme_descricao, 50) . "</p>";
+    echo anchor(site_url() . 'filme/detalhes/' . $filme->id, 'Veja mais detalhes do filme');
+
+    echo form_open('cart');
+    echo "<br />";
+    echo "<br />";
+    echo form_label('Compre agora:');
+    echo form_input(array('class' => 'input input-mini', 'name' => 'qtd', 'value' => '1'));
+    echo form_hidden('id', $filme->id);
+    echo form_submit(array('name' => 'add', 'class' => 'btn btn-primary', 'value' => 'add'));
+
+    echo form_close();
+
+    echo '</div>';
+
+endforeach;
+
+echo "<div class='pagination'>";
+echo $paginacao_filmes;
+echo "</div>";

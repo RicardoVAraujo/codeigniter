@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title><?php echo $titulo; ?></title>
+        <?php echo link_tag('public/css/site.css'); ?>
+        <?php echo link_tag('public/bootstrap/css/bootstrap.css'); ?>
+        <link href='http://fonts.googleapis.com/css?family=Alef' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="container">
+            <?php echo anchor('admin/cadastro', 'cadastro'); ?>
+            <?php echo anchor('admin/login/logout', 'logout'); ?>
+            <div id="conteudo">
+                <?php $this->load->view($view); ?>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>

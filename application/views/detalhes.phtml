@@ -1,0 +1,15 @@
+<?php
+echo heading( $filme_encontrado->filme_nome, 2 );
+echo img( $filme_encontrado->filme_foto );
+echo "<br />";
+echo $filme_encontrado->filme_descricao;
+
+echo form_open('cart');
+echo "<br />";
+echo "<br />";
+echo form_label('Compre agora:');
+echo form_input(array('class' => 'input input-mini', 'name' => 'qtd', 'value' => '1'));
+echo form_hidden('id', $filme_encontrado->id);
+echo form_submit(array('name' => 'add', 'class' => 'btn btn-primary', 'value' => 'add'));
+
+echo form_close();
